@@ -1,19 +1,23 @@
 {
-  "name": "npm-lib",
-  "version": "1.0.0",
+  "name": "@rh_packages/npm-lib",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "tsc",
     "dev": "vitest",
     "test": "vitest run",
-    "ci": "pnpm run lint && pnpm run test &&  pnpm run build"
+    "ci": "pnpm run lint && pnpm run test &&  pnpm run build",
+    "release": "pnpm run lint && pnpm run test &&  pnpm run build && changeset publish"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@types/node": "^20.9.0",
     "tsup": "^7.2.0",
     "typescript": "^5.2.2",
