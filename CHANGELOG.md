@@ -1,5 +1,11 @@
 # @rh_packages/npm-lib
 
+## 0.1.0
+
+### Minor Changes
+
+- added json post api
+
 ## 0.0.3
 
 ### Patch Changes
